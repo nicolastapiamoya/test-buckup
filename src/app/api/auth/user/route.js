@@ -1,0 +1,103 @@
+'use server'
+
+export async function login(credentials) {
+    try {
+        const res = await fetch("http://localhost:8080/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(credentials)
+        })
+
+        const data = await res.json();
+        return data
+    } catch (error) {
+        return error
+    }
+}
+
+export async function addUser(body) {
+    try {
+        const res = await fetch("http://localhost:8080/shop-user", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+        })
+
+        const data = await res.json();
+        if (data.id_user && data.token) {
+            return { status: 'ok' }
+        }
+        return {status: 'fail'}
+    } catch (error) {
+        return error
+    }
+}
+
+export async function allUsers() {
+    try {
+        const res = await fetch("http://localhost:8080/shop-user", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
+        const data = await res.json();
+        return data
+    } catch (error) {
+        return error
+    }
+}
+
+export async function usersById(id) {
+    try {
+        const res = await fetch(`http://localhost:8080/shop-user/${id}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
+        const data = await res.json();
+        return data
+    } catch (error) {
+        return error
+    }
+}
+
+export async function deleteUser(id) {
+    try {
+        const res = await fetch(`http://localhost:8080/shop-user/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
+        const data = await res.json();
+        return data
+    } catch (error) {
+        return error
+    }
+}
+
+export async function updateUser(body,id) {
+    try {
+        const res = await fetch(`http://localhost:8080/shop-user/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+        })
+
+        const data = await res.json();
+        return data
+    } catch (error) {
+        return error
+    }
+}
