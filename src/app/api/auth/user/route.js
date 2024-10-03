@@ -1,8 +1,10 @@
 'use server'
 
+import { configHost } from "../../config";
+
 export async function login(credentials) {
     try {
-        const res = await fetch("http://localhost:8080/login", {
+        const res = await fetch(`${configHost.host}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -19,7 +21,7 @@ export async function login(credentials) {
 
 export async function addUser(body) {
     try {
-        const res = await fetch("http://localhost:8080/shop-user", {
+        const res = await fetch(`${configHost.host}/shop-user`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -39,7 +41,7 @@ export async function addUser(body) {
 
 export async function allUsers() {
     try {
-        const res = await fetch("http://localhost:8080/shop-user", {
+        const res = await fetch(`${configHost.host}/shop-user`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -55,7 +57,7 @@ export async function allUsers() {
 
 export async function usersById(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-user/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-user/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -71,7 +73,7 @@ export async function usersById(id) {
 
 export async function deleteUser(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-user/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-user/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -87,16 +89,19 @@ export async function deleteUser(id) {
 
 export async function updateUser(body,id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-user/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-user/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(body)
         })
-
+        
         const data = await res.json();
-        return data
+        if (data.message === 'user updated successfully') {
+            return { status: 'ok' }
+        }
+        return {status: 'fail'}
     } catch (error) {
         return error
     }

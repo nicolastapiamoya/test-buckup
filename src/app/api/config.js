@@ -1,5 +1,5 @@
-export const config = {
-    host: process.env.HOST_BACK,
+export const configHost = {
+    host: 'http://localhost:8080',
 }
 
 export const MEHTOD = {

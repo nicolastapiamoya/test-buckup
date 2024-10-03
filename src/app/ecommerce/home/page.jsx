@@ -50,17 +50,17 @@ export default function page() {
             image_category: 'https://30c5ab-27.myshopify.com/cdn/shop/files/BANNER_PORMAYOR_01_copia.webp?v=1719537730&width=2000'
         },
         {
-            id_category: 1,
+            id_category: 4,
             name: '1',
             image_category: 'https://30c5ab-27.myshopify.com/cdn/shop/files/BANNER_PERRO_ULTRAWIDE.png?v=1719537705&width=2000'
         },
         {
-            id_category: 2,
+            id_category: 5,
             name: '2',
             image_category: 'https://30c5ab-27.myshopify.com/cdn/shop/files/BANNER_GATO_ULTRAWIDE.png?v=1719537713&width=2000'
         },
         {
-            id_category: 3,
+            id_category: 6,
             name: '3',
             image_category: 'https://30c5ab-27.myshopify.com/cdn/shop/files/BANNER_PORMAYOR_01_copia.webp?v=1719537730&width=2000'
         }
@@ -83,17 +83,17 @@ export default function page() {
             image_category: '/categories/fish.avif'
         },
         {
-            id_category: 1,
+            id_category: 4,
             name: 'Gallinas',
             image_category: '/categories/4.avif'
         },
         {
-            id_category: 2,
+            id_category: 5,
             name: 'Caballos',
             image_category: '/categories/5.avif'
         },
         {
-            id_category: 3,
+            id_category: 6,
             name: 'Loros',
             image_category: '/categories/6.avif'
         }
@@ -181,7 +181,7 @@ export default function page() {
                 <div className="flex justify-center">
                     <Carousel className="w-full mt-10 mb-10 m-2" showArrows={true} pagination={false} breakPoints={responsiveCarouselProduct}>
                         {categories.length > 0 ? categories.map((ctg, index) => (
-                            <Link href='#' key={index}>
+                            <Link href={`/ecommerce/categories/${ctg.id_category}`} key={index}>
                                 <div className="border-gray-900 hover:border-solid hover:border hover:border-purple-900 rounded-full h-40 w-40 p-0.5 flex-col justify-center items-center" key={index}>
                                     <img
                                         key={index}
@@ -203,7 +203,7 @@ export default function page() {
                     {/*CAROUSEL DE PRODUCTOS*/}
                     <Carousel className="w-full" showArrows={false} enableSwipe={true} pagination={true} breakPoints={responsiveCarouselProduct}>
                         {products.length > 0 ? products.map((ctg, index) => (
-                            <div className="p-10 hover:border-solid hover:border-violet-800 hover:border rounded-lg" key={index}>
+                            <Link className="p-10 hover:border-solid hover:border-violet-800 hover:border rounded-lg" key={index} href={`/ecommerce/pdp/${ctg.id_category}`}>
                                 <div className="flex items-center justify-center">
                                     <img
                                         src={ctg.image_category}
@@ -215,7 +215,7 @@ export default function page() {
                                 <div className="font-light text-xs mt-3 ">$25.990 CLP</div>
                                 <div className="font-normal text-sm mt-1">$20.990 CLP</div>
                                 <div className="mt-3 border-solid border rounded-lg p-2 font-normal flex justify-center text-sm bg-primary text-white">Añadir al carro</div>
-                            </div>
+                            </Link>
 
                         )) : <></>}
                     </Carousel>

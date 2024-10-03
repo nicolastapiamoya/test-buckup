@@ -1,8 +1,10 @@
 'use server'
 
+import { configHost } from "../../config";
+
 export async function addSubsidiary(body) {
     try {
-        const res = await fetch("http://localhost:8080/shop-sucursal", {
+        const res = await fetch(`${configHost.host}/shop-sucursal`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -22,7 +24,7 @@ export async function addSubsidiary(body) {
 
 export async function allSubsidiary() {
     try {
-        const res = await fetch("http://localhost:8080/shop-sucursal", {
+        const res = await fetch(`${configHost.host}/shop-sucursal`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -38,7 +40,7 @@ export async function allSubsidiary() {
 
 export async function subsidiaryById(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-sucursal/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-sucursal/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -54,7 +56,7 @@ export async function subsidiaryById(id) {
 
 export async function deleteSubsidiary(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-sucursal/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-sucursal/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -70,7 +72,7 @@ export async function deleteSubsidiary(id) {
 
 export async function updateSubsidiary(body,id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-sucursal/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-sucursal/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -79,7 +81,10 @@ export async function updateSubsidiary(body,id) {
         })
 
         const data = await res.json();
-        return data
+        if (data.message === 'Subsidiary updated successfully') {
+            return { status: 'ok' }
+        }
+        return {status: 'fail'}
     } catch (error) {
         return error
     }
