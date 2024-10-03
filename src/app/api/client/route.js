@@ -1,8 +1,11 @@
 "use server"
+
+import { configHost } from "../config";
+
         
         export async function allClient() {
             try {
-                const res = await fetch("http://localhost:8080/shop-client", {
+                const res = await fetch(`${configHost.host}/shop-client`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
@@ -18,7 +21,7 @@
         
         export async function ClientById(id) {
             try {
-                const res = await fetch("http://localhost:8080/shop-client/" + id, {
+                const res = await fetch(`${configHost.host}/shop-client/` + id, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
@@ -34,7 +37,7 @@
         
         export async function addClient(body) {
             try {
-                const res = await fetch("http://localhost:8080/client", {
+                const res = await fetch(`${configHost.host}/client`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -54,7 +57,7 @@
         
         export async function deleteClient(id) {
             try {
-                const res = await fetch("http://localhost:8080/client/" + id, {
+                const res = await fetch(`${configHost.host}/client/` + id, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json"
@@ -70,7 +73,7 @@
         
         export async function updateClient(body,id) {
             try {
-                const res = await fetch("http://localhost:8080/client/" + id, {
+                const res = await fetch(`${configHost.host}/client/` + id, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"

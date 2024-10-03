@@ -1,8 +1,10 @@
 'use server'
 
+import { configHost } from "../../config";
+
 export async function allOrders() {
     try {
-        const res = await fetch(`http://localhost:8080/shop-order`);
+        const res = await fetch(`${configHost.host}/shop-order`);
         const data = await res.json();
         return data;
     } catch (error) {
@@ -12,7 +14,7 @@ export async function allOrders() {
 
 export async function orderById(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-order/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-order/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -29,7 +31,7 @@ export async function orderById(id) {
 
 export async function addOrder(body) {
     try {
-        const res = await fetch("http://localhost:8080/shop-order", {
+        const res = await fetch(`${configHost.host}/shop-order`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -51,7 +53,7 @@ export async function addOrder(body) {
 
 export async function deleteOrder(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-order/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-order/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -68,7 +70,7 @@ export async function deleteOrder(id) {
 
 export async function updateOrder(body, id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-order/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-order/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

@@ -1,8 +1,10 @@
 'use server'
 
+import { configHost } from "../../config";
+
 export async function allCartUserByIdPointOfSales(idUser) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-cart-user/${idUser}`);
+        const res = await fetch(`${configHost.host}/shop-cart-user/${idUser}`);
         const data = await res.json();
         return data;
     } catch (error) {
@@ -12,7 +14,7 @@ export async function allCartUserByIdPointOfSales(idUser) {
 
 export async function getCartById(idCart) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-cart/${idCart}`);
+        const res = await fetch(`${configHost.host}/shop-cart/${idCart}`);
         const data = await res.json();
         return data;
     } catch (error) {
@@ -24,7 +26,7 @@ export async function getCartById(idCart) {
 
 export async function allProductByCategoryIdPointOfSales(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-category-product/${id}`);
+        const res = await fetch(`${configHost.host}/shop-category-product/${id}`);
         const data = await res.json();
         return data;
     } catch (error) {
@@ -34,7 +36,7 @@ export async function allProductByCategoryIdPointOfSales(id) {
 
 export async function addToCart(reqBody) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-add-to-cart`, {
+        const res = await fetch(`${configHost.host}/shop-add-to-cart`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -58,7 +60,7 @@ export async function addToCart(reqBody) {
 
 export async function newCartPointOfSales(reqBody) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-cart`, {
+        const res = await fetch(`${configHost.host}/shop-cart`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -83,7 +85,7 @@ export async function newCartPointOfSales(reqBody) {
 
 export async function updateItemInCartPointOfSales(reqBody, id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-update-to-cart/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-update-to-cart/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -105,7 +107,7 @@ export async function updateItemInCartPointOfSales(reqBody, id) {
 
 export async function deleteItemInCartPointOfSales(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-delete-to-cart/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-delete-to-cart/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"

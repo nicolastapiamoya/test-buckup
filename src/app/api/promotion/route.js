@@ -1,8 +1,11 @@
 "use server"
+
+import { configHost } from "../config";
+
         
         export async function allPromotion() {
             try {
-                const res = await fetch("http://localhost:8080/shop-promotion", {
+                const res = await fetch(`${configHost.host}/shop-promotion`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
@@ -18,7 +21,7 @@
         
         export async function PromotionById(id) {
             try {
-                const res = await fetch("http://localhost:8080/shop-promotion/" + id, {
+                const res = await fetch(`${configHost.host}/shop-promotion/` + id, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
@@ -34,7 +37,7 @@
         
         export async function addPromotion(body) {
             try {
-                const res = await fetch("http://localhost:8080/shop-promotion", {
+                const res = await fetch(`${configHost.host}/shop-promotion`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -54,7 +57,7 @@
         
         export async function deletePromotion(id) {
             try {
-                const res = await fetch("http://localhost:8080/shop-promotion/" + id, {
+                const res = await fetch(`${configHost.host}/shop-promotion/` + id, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json"
@@ -70,7 +73,7 @@
         
         export async function updatePromotion(body,id) {
             try {
-                const res = await fetch("http://localhost:8080/shop-promotion/" + id, {
+                const res = await fetch(`${configHost.host}/shop-promotion/` + id, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"

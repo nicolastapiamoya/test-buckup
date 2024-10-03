@@ -1,8 +1,10 @@
 'use server'
 
+import { configHost } from "../../config";
+
 export async function allCategoriesPointOfSales() {
     try {
-        const res = await fetch(`http://localhost:8080/shop-categories`);
+        const res = await fetch(`${configHost.host}/shop-categories`);
         const data = await res.json();
         return data;
     } catch (error) {
@@ -12,7 +14,7 @@ export async function allCategoriesPointOfSales() {
 
 export async function allCategories() {
     try {
-        const res = await fetch(`http://localhost:8080/shop-categories`);
+        const res = await fetch(`${configHost.host}/shop-categories`);
         const data = await res.json();
         return data;
     } catch (error) {
@@ -22,7 +24,7 @@ export async function allCategories() {
 
 export async function addCategory(body) {
     try {
-        const res = await fetch("http://localhost:8080/shop-category", {
+        const res = await fetch(`${configHost.host}/shop-category`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -43,14 +45,16 @@ export async function addCategory(body) {
 
 export async function categoriesById(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-categories/${id}`, {
+        console.log('llega', id)
+        const res = await fetch(`${configHost.host}/shop-category/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
             }
         })
-
+        console.log(res)
         const data = await res.json();
+        console.log(data)
         return data
     } catch (error) {
         return error
@@ -59,7 +63,7 @@ export async function categoriesById(id) {
 
 export async function deleteCategory(id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-category/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-category/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -75,7 +79,7 @@ export async function deleteCategory(id) {
 
 export async function updateCategory(body,id) {
     try {
-        const res = await fetch(`http://localhost:8080/shop-categories/${id}`, {
+        const res = await fetch(`${configHost.host}/shop-category/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -84,7 +88,10 @@ export async function updateCategory(body,id) {
         })
 
         const data = await res.json();
-        return data
+        if (data.message === 'Categories updated successfully') {
+            return { status: 'ok' }
+        }
+        return {status: 'fail'}
     } catch (error) {
         return error
     }

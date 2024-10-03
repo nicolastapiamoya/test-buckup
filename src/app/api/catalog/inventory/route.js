@@ -1,8 +1,10 @@
 'use server'
 
+import { configHost } from "../../config";
+
 export async function allInventories() {
     try {
-        const res = await fetch(`http://localhost:8080/all-product-inventories`);
+        const res = await fetch(`${configHost.host}/all-product-inventories`);
         const data = await res.json();
         return data;
     } catch (error) {
@@ -13,7 +15,7 @@ export async function allInventories() {
 
 export async function inventoryById(ids) {
     try {
-        const res = await fetch(`http://localhost:8080/product-inventory/${ids}`);
+        const res = await fetch(`${configHost.host}/product-inventory/${ids}`);
         const data = await res.json();
         return data;
     } catch (error) {
@@ -24,7 +26,7 @@ export async function inventoryById(ids) {
 export async function addInventory(body) {
     try {
 
-         const res = await fetch(`http://localhost:8080/product-inventory`,{
+         const res = await fetch(`${configHost.host}/product-inventory`,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -50,7 +52,7 @@ export async function addInventory(body) {
 
 export async function deleteInventory(id) {
     try {
-        const res = await fetch(`http://localhost:8080/product-inventory/${id}`, {
+        const res = await fetch(`${configHost.host}/product-inventory/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -66,7 +68,7 @@ export async function deleteInventory(id) {
 
 export async function updateInventory(body,id) {
     try {
-        const res = await fetch(`http://localhost:8080/product-inventory/${id}`, {
+        const res = await fetch(`${configHost.host}/product-inventory/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

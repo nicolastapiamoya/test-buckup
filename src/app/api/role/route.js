@@ -1,8 +1,11 @@
 "use server"
+
+import { configHost } from "../config";
+
         
         export async function allRole() {
             try {
-                const res = await fetch("http://localhost:8080/role", {
+                const res = await fetch(`${configHost.host}/shop-roles`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
@@ -16,9 +19,9 @@
             }
         }
         
-        export async function RoleById(id) {
+        export async function roleById(id) {
             try {
-                const res = await fetch("http://localhost:8080/role/" + id, {
+                const res = await fetch(`${configHost.host}/shop-roles/` + id, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
@@ -34,7 +37,7 @@
         
         export async function addRole(body) {
             try {
-                const res = await fetch("http://localhost:8080/role", {
+                const res = await fetch(`${configHost.host}/shop-roles`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -51,7 +54,7 @@
         
         export async function deleteRole(id) {
             try {
-                const res = await fetch("http://localhost:8080/role/" + id, {
+                const res = await fetch(`${configHost.host}/shop-roles/` + id, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json"
@@ -67,7 +70,7 @@
         
         export async function updateRole(body,id) {
             try {
-                const res = await fetch("http://localhost:8080/role/" + id, {
+                const res = await fetch(`${configHost.host}/shop-roles/` + id, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
