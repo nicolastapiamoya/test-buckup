@@ -1,16 +1,23 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-elastic-carousel';
 import * as IconLu from "react-icons/lu"
 
-export default function page() {
-
+export default function Page() {
+  const [isLoading, setIsLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [popOverOpen, setPopOverOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState({ personalizaTuTienda: false, documentos: false, reportes: false, catalogo: false, cliente: false, marketing: false });
 
+  useEffect(() => {
+    // Simula un retardo de carga, puedes reemplazar esto con lógica real si es necesario
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Oculta el spinner después de la carga
+    }, 2000); // 2 segundos de retardo para la simulación
+    return () => clearTimeout(timer);
+  }, []);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -183,6 +190,20 @@ export default function page() {
       image_category: '/brands/2.jfif'
     }
   ]
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div
+          class="inline-block h-10 w-10 animate-spin rounded-full border-4 border-solid text-purple-900 border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-purple-500"
+          role="status">
+          <span
+            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Loading...</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
