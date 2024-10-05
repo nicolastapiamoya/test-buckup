@@ -2,8 +2,17 @@
 
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import Carousel from 'react-elastic-carousel';
+//import Carousel from 'react-elastic-carousel';
 import * as IconLu from "react-icons/lu"
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import './globals.css'
+// import required modules
+import {Parallax, Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +24,7 @@ export default function Page() {
     // Simula un retardo de carga, puedes reemplazar esto con lógica real si es necesario
     const timer = setTimeout(() => {
       setIsLoading(false); // Oculta el spinner después de la carga
-    }, 2000); // 2 segundos de retardo para la simulación
+    }, 500); // 2 segundos de retardo para la simulación
     return () => clearTimeout(timer);
   }, []);
 
@@ -37,32 +46,6 @@ export default function Page() {
     }));
   };
 
-  const responsiveCarouselPrincipal = [
-    { width: 1, itemsToShow: 1 },
-    { width: 150, itemsToShow: 1 },
-    { width: 250, itemsToShow: 1 },
-    { width: 350, itemsToShow: 1 },
-    { width: 450, itemsToShow: 1 },
-    { width: 550, itemsToShow: 1 },
-    { width: 650, itemsToShow: 1 },
-    { width: 750, itemsToShow: 1 },
-  ];
-
-  const responsiveCarouselProduct = [
-    { width: 1, itemsToShow: 2 },
-    { width: 150, itemsToShow: 2 },
-    { width: 250, itemsToShow: 2 },
-    { width: 350, itemsToShow: 2 },
-    { width: 450, itemsToShow: 2 },
-    { width: 550, itemsToShow: 3 },
-    { width: 650, itemsToShow: 3 },
-    { width: 750, itemsToShow: 3 },
-    { width: 850, itemsToShow: 4 },
-    { width: 950, itemsToShow: 4 },
-    { width: 1050, itemsToShow: 5 },
-    { width: 1150, itemsToShow: 5 },
-    { width: 1250, itemsToShow: 6 },
-  ];
 
   const images_group = [
     {
@@ -191,15 +174,31 @@ export default function Page() {
     }
   ]
 
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + ' p-2 shadow-md transition duration-300 ease-in-out transform hover:translate-y-1 hover:scale-100 "></span>';
+    },
+  };
+
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center h-screen">
-        <div
-          class="inline-block h-10 w-10 animate-spin rounded-full border-4 border-solid text-purple-900 border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-purple-500"
+      <div className="flex justify-center items-center h-screen bg-primary">
+        <div className="grid grid-cols-1">
+          <div className="col-span-1 flex justify-center mb-5">
+          <div
+          className="inline-block h-10 w-10 animate-spin rounded-full border-4 border-solid text-white border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-purple-500"
           role="status">
           <span
-            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
           >Loading...</span>
+        </div>
+          </div>
+          <div className="col-span-1 flex justify-center">
+          <div className="flex justify-center">
+          <img src="https://30c5ab-27.myshopify.com/cdn/shop/files/Mesa_de_trabajo_4.png?v=1719537986&width=210" className="w-36 h-14 px-2 py-1 rounded-md flex justify-center bg-primary" />
+        </div>
+          </div>
         </div>
       </div>
     );
@@ -246,66 +245,163 @@ export default function Page() {
           </div>
         </nav>
       </header>
-
       <main className="ml-0 transition-all duration-300 ease-in-out" onClick={popOverOpen ? togglePopOver : undefined}>
         <main className="flex min-h-screen flex-col z-0">
           <section>
             {/*CAROUSEL PRINCIPAL*/}
-            <Carousel className="w-full" showArrows={false} enableSwipe={true} pagination={true} breakPoints={responsiveCarouselPrincipal}>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              loop={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              pagination={pagination}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper"
+            >
               {images_group.length > 0 ? images_group.map((ctg, index) => (
-                <img
+                <SwiperSlide><img
                   key={index}
                   src={ctg.image_category}
                   alt={ctg.name}
-                  className="h-[400px] w-full  object-cover" // Ajusta la imagen al contenedor
-                />
+                  className="h-[500px] w-full  object-cover" // Ajusta la imagen al contenedor
+                /></SwiperSlide>
               )) : <></>}
-            </Carousel>
-          </section>
 
+            </Swiper>
+          </section>
           <section>
             {/*CATEGORIAS*/}
-            <div className="flex justify-center">
-              <Carousel className="w-full mt-10 mb-10 m-2 " showArrows={true} pagination={false} breakPoints={responsiveCarouselProduct}>
+            <div className="flex justify-center mx-10">
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={10}
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                  },
+                  1280: {
+                    slidesPerView: 5,
+                    spaceBetween: 10,
+                  },
+                  1620: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                  },
+                  1920: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                  },
+                  2560: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                  }
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+              >
                 {categories.length > 0 ? categories.map((ctg, index) => (
-                  <Link href={`/ecommerce/categories/${ctg.id_category}`} key={index} className="p-10">
-                    <div className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 border-gray-900 rounded-full h-40 w-40 p-0.5 flex-col justify-center items-center" key={index}>
-                      <img
-                        key={index}
-                        src={ctg.image_category}
-                        alt={ctg.name}
-                        className="rounded-full  object-cover" // Ajusta la imagen al contenedor
-                      />
+                  <SwiperSlide>
+                    <div className="mt-10 rounded-lg p-8 mx-12 flex justify-center">
+                      <Link href={`/ecommerce/categories/${ctg.id_category}`} key={index} className="">
+                        <div className=" shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 border-gray-900 rounded-full h-40 w-40 p-0.5 flex-col justify-center items-center" key={index}>
+                          <img
+                            key={index}
+                            src={ctg.image_category}
+                            alt={ctg.name}
+                            className="rounded-full  object-cover" // Ajusta la imagen al contenedor
+                          />
+                        </div>
+                        <div className="mt-2 flex justify-center">{ctg.name}</div>
+                      </Link>
                     </div>
-                    <div className="mt-2 flex justify-center">{ctg.name}</div>
-                  </Link>
+                  </SwiperSlide>
                 )) : <></>}
-              </Carousel>
+              </Swiper>
             </div>
           </section>
-
           <section>
-            <div className="bg-white  mt-10">
+            <div className="bg-white  mt-10 mx-10">
               <div className="ml-20 mb-10 justify-start font-bold text-2xl ">Ofertas para tu regalón</div>
               {/*CAROUSEL DE PRODUCTOS*/}
-              <Carousel className="w-full" showArrows={false} enableSwipe={true} pagination={true} breakPoints={responsiveCarouselProduct}>
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={10}
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                  },
+                  1620: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                  },
+                  1920: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                  },
+                  2560: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                  }
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+              >
                 {products.length > 0 ? products.map((ctg, index) => (
-                  <Link className="p-10 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105" key={index} href={`/ecommerce/pdp/${ctg.id_category}`}>
-                    <div className="flex items-center justify-center">
-                      <img
-                        src={ctg.image_category}
-                        alt={ctg.name}
-                        className="h-[160px] w-[140px] flex items-center justify-center object-cover" // Ajusta la imagen al contenedor
-                      />
+                  <SwiperSlide>
+                    <div className="mb-10 border-solid border-2 rounded-lg p-8 mx-12">
+                      <Link className=" rounded-lg" key={index} href={`/ecommerce/pdp/${ctg.id_category}`}>
+                        <div className="flex items-center justify-center">
+                          <img
+                            src={ctg.image_category}
+                            alt={ctg.name}
+                            className="h-[160px] w-[140px] flex items-center justify-center object-cover transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110" // Ajusta la imagen al contenedor
+                          />
+                        </div>
+                      </Link>
+                      <div className="font-semibold text-sm uppercase flex justify-center mt-5">Alimento gato ekos cat gato 10 kg</div>
+                      <div className="font-light text-xs mt-3 ">$25.990 CLP</div>
+                      <div className="font-normal text-sm mt-1">$20.990 CLP</div>
+                      <div className="flex justify-center">
+                        <button className="mt-3 w-48 border-solid border rounded-lg p-2 font-normal flex justify-center text-sm bg-primary text-white shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">Añadir al carro</button>
+                      </div>
                     </div>
-                    <div className="font-semibold text-sm uppercase flex justify-center mt-5">Alimento gato ekos cat gato 10 kg</div>
-                    <div className="font-light text-xs mt-3 ">$25.990 CLP</div>
-                    <div className="font-normal text-sm mt-1">$20.990 CLP</div>
-                    <div className="mt-3 border-solid border rounded-lg p-2 font-normal flex justify-center text-sm bg-primary text-white">Añadir al carro</div>
-                  </Link>
-
+                  </SwiperSlide>
                 )) : <></>}
-              </Carousel>
+              </Swiper>
             </div>
           </section>
 
@@ -332,26 +428,71 @@ export default function Page() {
           </section>
 
           <section>
-            <div className="bg-white  mt-10">
+            <div className="bg-white mt-10 mx-10">
               <div className="ml-20 mb-10 justify-start font-bold text-2xl ">Ofertas para tu regalón</div>
               {/*CAROUSEL DE PRODUCTOS*/}
-              <Carousel className="w-full" showArrows={false} enableSwipe={true} pagination={true} breakPoints={responsiveCarouselProduct}>
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={10}
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                  },
+                  1620: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                  },
+                  1920: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                  },
+                  2560: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                  }
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+              >
                 {products.length > 0 ? products.map((ctg, index) => (
-                  <div className="p-10 hover:border-solid shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 rounded-lg" key={index}>
-                    <div className="flex items-center justify-center">
-                      <img
-                        src={ctg.image_category}
-                        alt={ctg.name}
-                        className="h-[160px] w-[140px] flex items-center justify-center object-cover" // Ajusta la imagen al contenedor
-                      />
+                  <SwiperSlide>
+                    <div className="mb-10 border-solid border-2 rounded-lg p-8 mx-12">
+                      <Link className=" rounded-lg" key={index} href={`/ecommerce/pdp/${ctg.id_category}`}>
+                        <div className="flex items-center justify-center">
+                          <img
+                            src={ctg.image_category}
+                            alt={ctg.name}
+                            className="h-[160px] w-[140px] flex items-center justify-center object-cover transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110" // Ajusta la imagen al contenedor
+                          />
+                        </div>
+                      </Link>
+                      <div className="font-semibold text-sm uppercase flex justify-center mt-5">Alimento gato ekos cat gato 10 kg</div>
+                      <div className="font-light text-xs mt-3 ">$25.990 CLP</div>
+                      <div className="font-normal text-sm mt-1">$20.990 CLP</div>
+                      <div className="flex justify-center">
+                        <button className="mt-3 w-48 border-solid border rounded-lg p-2 font-normal flex justify-center text-sm bg-primary text-white shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">Añadir al carro</button>
+                      </div>
                     </div>
-                    <div className="font-semibold text-sm uppercase flex justify-center mt-5">Alimento gato ekos cat gato 10 kg</div>
-                    <div className="font-light text-xs mt-3 ">$25.990 CLP</div>
-                    <div className="font-normal text-sm mt-1">$20.990 CLP</div>
-                    <div className="mt-3 border-solid border rounded-lg p-2 font-normal flex justify-center text-sm bg-primary text-white">Añadir al carro</div>
-                  </div>
+                  </SwiperSlide>
                 )) : <></>}
-              </Carousel>
+              </Swiper>
             </div>
           </section>
 
