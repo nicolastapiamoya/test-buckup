@@ -263,8 +263,8 @@ export default function Page() {
               className="mySwiper"
             >
               {images_group.length > 0 ? images_group.map((ctg, index) => (
-                <SwiperSlide><img
-                  key={index}
+                <SwiperSlide key={index}>
+                  <img
                   src={ctg.image_category}
                   alt={ctg.name}
                   className="h-[500px] w-full  object-cover" // Ajusta la imagen al contenedor
@@ -317,9 +317,9 @@ export default function Page() {
                 className="mySwiper"
               >
                 {categories.length > 0 ? categories.map((ctg, index) => (
-                  <SwiperSlide>
+                  <SwiperSlide  key={index}>
                     <div className="mt-10 rounded-lg p-8 mx-12 flex justify-center">
-                      <Link href={`/ecommerce/categories/${ctg.id_category}`} key={index} className="">
+                      <Link href={`/ecommerce/categories/${ctg.id_category}`} className="">
                         <div className=" shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 border-gray-900 rounded-full h-40 w-40 p-0.5 flex-col justify-center items-center" key={index}>
                           <img
                             key={index}
@@ -381,9 +381,9 @@ export default function Page() {
                 className="mySwiper"
               >
                 {products.length > 0 ? products.map((ctg, index) => (
-                  <SwiperSlide>
+                  <SwiperSlide  key={index}>
                     <div className="mb-10 border-solid border-2 rounded-lg p-8 mx-12">
-                      <Link className=" rounded-lg" key={index} href={`/ecommerce/pdp/${ctg.id_category}`}>
+                      <Link className=" rounded-lg" href={`/ecommerce/pdp/${ctg.id_category}`}>
                         <div className="flex items-center justify-center">
                           <img
                             src={ctg.image_category}
@@ -472,9 +472,9 @@ export default function Page() {
                 className="mySwiper"
               >
                 {products.length > 0 ? products.map((ctg, index) => (
-                  <SwiperSlide>
+                  <SwiperSlide  key={index}>
                     <div className="mb-10 border-solid border-2 rounded-lg p-8 mx-12">
-                      <Link className=" rounded-lg" key={index} href={`/ecommerce/pdp/${ctg.id_category}`}>
+                      <Link className=" rounded-lg"  href={`/ecommerce/pdp/${ctg.id_category}`}>
                         <div className="flex items-center justify-center">
                           <img
                             src={ctg.image_category}
