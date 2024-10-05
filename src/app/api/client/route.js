@@ -1,5 +1,5 @@
 "use server"
-export const runtime = 'edge'; 
+
 import { configHost } from "../config";
 
         

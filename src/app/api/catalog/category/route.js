@@ -135,4 +135,3 @@ export async function updateCategory(body,id) {
     }
 }
 
-export const runtime = 'edge'; 

@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { configHost } from "../../config";
-export const runtime = 'edge'; 
+
 
 export async function GET() {
     try {

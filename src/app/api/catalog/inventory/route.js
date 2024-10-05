@@ -1,7 +1,7 @@
 'use server'
 
 import { configHost } from "../../config";
-export const runtime = 'edge'; 
+
 export async function allInventories() {
     try {
         const res = await fetch(`${configHost.host}/all-product-inventories`);
