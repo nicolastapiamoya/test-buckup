@@ -1,5 +1,5 @@
 import React from 'react'
-
+export const runtime = 'edge'; 
 export default function page({ params }) {
     return (
         <main className="flex min-h-screen flex-col z-0">

@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import jwt from "jsonwebtoken";
 import { login } from "../user/route";
-
+export const runtime = 'edge'; 
 export const authOptions = {
 
     providers: [

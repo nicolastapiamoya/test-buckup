@@ -1,7 +1,7 @@
 import { inventoryById } from '@/app/api/catalog/inventory/route'
 import Link from 'next/link'
 import React from 'react'
-
+export const runtime = 'edge'; 
 export default async function page({ params }) {
     const id = params.id_inventory
     const inventory = await inventoryById(id)

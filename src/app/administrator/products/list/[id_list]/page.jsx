@@ -7,7 +7,7 @@ import SelectCategory from '@/app/components/products/productList/SelectCategory
 import { revalidatePath } from 'next/cache'
 import Link from 'next/link'
 import React from 'react'
-
+export const runtime = 'edge'; 
 export default async function ListProductDetailPage({ params }) {
   const productInList = await ProductInlistById(params.id_list)
   const listProduct = await ProductlistById(params.id_list)

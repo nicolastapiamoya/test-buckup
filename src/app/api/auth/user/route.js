@@ -1,7 +1,7 @@
 'use server'
 
 import { configHost } from "../../config";
-
+export const runtime = 'edge'; 
 export async function login(credentials) {
     try {
         const res = await fetch(`${configHost.host}/login`, {

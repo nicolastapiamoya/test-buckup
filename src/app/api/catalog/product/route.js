@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { configHost } from "../../config";
-
+export const runtime = 'edge'; 
 export async function allProduct() {
     try {
         const res = await fetch(`${configHost.host}/v2/shop-all-products`);
