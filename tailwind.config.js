@@ -22,7 +22,9 @@ module.exports = {
         'hover-primary': '#753787',
         'hover-celeste': '#A8EBFF',
         'black': '#000'
-      }
+      },
+      swiperBullet: '#007bff', // Color para los puntos
+      swiperActiveBullet: '#ff5733', // Color para el punto activo
     },
   },
   plugins: [],
