@@ -1,38 +1,27 @@
 name: Node.js CI
-
 on:
   push:
     branches: [ "master" ]
-
 jobs:
   build:
     runs-on: self-hosted
-
     strategy:
       matrix:
         node-version: [20.18.0]
-
     steps:
     - uses: actions/checkout@v4
-
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-
     - run: npm cache clean --force
-
     - run: npm ci
-
     - run: rm -rf .next # Eliminar el directorio .next si existe
-
     - run: npm run build --if-present
-
     # List the .next directory to verify build output
     - name: Verify .next Directory
       run: ls -l .next
-
     # Optional: Start the Application
     - name: Start Application
       run: npm start
