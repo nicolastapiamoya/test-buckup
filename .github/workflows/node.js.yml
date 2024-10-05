@@ -32,7 +32,3 @@ jobs:
     # List the .next directory to verify build output
     - name: Verify .next Directory
       run: ls -l .next
-
-    # Optional: Start the Application
-    - name: Start Application
-      run: npm start
