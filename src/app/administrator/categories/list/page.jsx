@@ -2,7 +2,7 @@
 
 import ServerListCategoryTable from "@/app/components/categories/categoryList/ServerListCategoryTable";
 import Link from "next/link";
-
+export const runtime = 'edge'; 
 export default function ListCategories() {
 
     return (

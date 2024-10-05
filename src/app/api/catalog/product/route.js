@@ -3,6 +3,27 @@
 import { revalidatePath } from "next/cache";
 import { configHost } from "../../config";
 
+
+export async function GET() {
+    try {
+        const res = await fetch(`${configHost.host}/v2/shop-all-products`);
+        const data = await res.json();
+        return new Response(JSON.stringify(data), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+    } catch (error) {
+        return new Response(JSON.stringify({ error: 'Error fetching products' }), {
+            status: 500,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+    }
+}
+
 export async function allProduct() {
     try {
         const res = await fetch(`${configHost.host}/v2/shop-all-products`);

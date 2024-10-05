@@ -2,7 +2,7 @@
 
 import { configHost } from "../config";
 
-        
+ 
         export async function allRole() {
             try {
                 const res = await fetch(`${configHost.host}/shop-roles`, {

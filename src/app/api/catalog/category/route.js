@@ -22,6 +22,27 @@ export async function allCategories() {
     }
 }
 
+
+export async function GET() {
+    try {
+        const res = await fetch(`${configHost.host}/shop-categories`);
+        const data = await res.json();
+        return new Response(JSON.stringify(data), {
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+    } catch (error) {
+        return new Response(JSON.stringify({ error: 'Error fetching categories' }), {
+            status: 500,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+    }
+}
+
 export async function addCategory(body) {
     try {
         const res = await fetch(`${configHost.host}/shop-category`, {
@@ -40,6 +61,23 @@ export async function addCategory(body) {
         return {status: 'fail'}
     } catch (error) {
         return error
+    }
+}
+
+export async function POST(req) {
+    const body = await req.json();
+    try {
+        const res = await fetch(`${configHost.host}/shop-category`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body),
+        });
+        const data = await res.json();
+        return new Response(JSON.stringify(data), { status: 200 });
+    } catch (error) {
+        return new Response(JSON.stringify({ error: 'Error adding category' }), { status: 500 });
     }
 }
 

@@ -1,7 +1,7 @@
 import AddCategory from '@/app/components/categories/AddCategory'
 import Link from 'next/link'
 import React from 'react'
-
+export const runtime = 'edge'; 
 export default function CreateCategory() {
   return (
     <main className=" flex min-h-screen flex-col px-12 bg-gris">

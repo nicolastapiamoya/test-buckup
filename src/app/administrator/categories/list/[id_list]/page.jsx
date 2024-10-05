@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 import React from 'react'
-
+export const runtime = 'edge'; 
 export default function ListCategoryDetailPage({ params }) {
   console.log(params)
   return (

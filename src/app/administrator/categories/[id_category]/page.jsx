@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-
+export const runtime = 'edge'; 
 export default function page(params) {
     const id = params.id_category
 
