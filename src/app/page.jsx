@@ -337,7 +337,7 @@ export default function Page() {
           </section>
           <section>
             <div className="bg-white  mt-10 mx-10">
-              <div className="ml-20 mb-10 justify-start font-bold text-2xl ">Ofertas para tu regalón</div>
+              <div className="ml-20 mb-10 justify-start font-bold text-2xl ">Ofertas para tu regalón test reload </div>
               {/*CAROUSEL DE PRODUCTOS*/}
               <Swiper
                 slidesPerView={1}
