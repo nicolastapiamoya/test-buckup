@@ -22,9 +22,11 @@ jobs:
 
     - run: npm cache clean --force
 
-    - run: npm ci
+    - run: npm i
 
     - run: export NODE_ENV=production 
     
     - run: npm run build --if-present
+
+    - run: pm2 reload 0
 
