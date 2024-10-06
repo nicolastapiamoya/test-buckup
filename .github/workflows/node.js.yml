@@ -24,6 +24,8 @@ jobs:
 
     - run: npm ci
 
+    - run: export NODE_ENV=production 
+    
     - run: npx next build  # Esto construye tu app de Next.js
 
     - name: Start PM2 Server
