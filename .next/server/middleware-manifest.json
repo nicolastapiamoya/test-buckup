@@ -26,67 +26,9 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
-      }
-    },
-    "/administrator/categories/list/[id_list]/page": {
-      "files": [
-        "server/server-reference-manifest.js",
-        "server/app/administrator/categories/list/[id_list]/page_client-reference-manifest.js",
-        "server/middleware-build-manifest.js",
-        "server/middleware-react-loadable-manifest.js",
-        "server/next-font-manifest.js",
-        "server/interception-route-rewrite-manifest.js",
-        "prerender-manifest.js",
-        "server/edge-runtime-webpack.js",
-        "server/edge-chunks/834.js",
-        "server/app/administrator/categories/list/[id_list]/page.js"
-      ],
-      "name": "app/administrator/categories/list/[id_list]/page",
-      "page": "/administrator/categories/list/[id_list]/page",
-      "matchers": [
-        {
-          "regexp": "^/administrator/categories/list/(?<id_list>[^/]+?)$",
-          "originalSource": "/administrator/categories/list/[id_list]"
-        }
-      ],
-      "wasm": [],
-      "assets": [],
-      "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
-      }
-    },
-    "/administrator/categories/[id_category]/page": {
-      "files": [
-        "server/server-reference-manifest.js",
-        "server/app/administrator/categories/[id_category]/page_client-reference-manifest.js",
-        "server/middleware-build-manifest.js",
-        "server/middleware-react-loadable-manifest.js",
-        "server/next-font-manifest.js",
-        "server/interception-route-rewrite-manifest.js",
-        "prerender-manifest.js",
-        "server/edge-runtime-webpack.js",
-        "server/edge-chunks/834.js",
-        "server/app/administrator/categories/[id_category]/page.js"
-      ],
-      "name": "app/administrator/categories/[id_category]/page",
-      "page": "/administrator/categories/[id_category]/page",
-      "matchers": [
-        {
-          "regexp": "^/administrator/categories/(?<id_category>[^/]+?)$",
-          "originalSource": "/administrator/categories/[id_category]"
-        }
-      ],
-      "wasm": [],
-      "assets": [],
-      "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
       }
     },
     "/administrator/categories/create/page": {
@@ -116,15 +58,15 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
       }
     },
-    "/administrator/inventories/[id_inventory]/page": {
+    "/administrator/categories/[id_category]/page": {
       "files": [
         "server/server-reference-manifest.js",
-        "server/app/administrator/inventories/[id_inventory]/page_client-reference-manifest.js",
+        "server/app/administrator/categories/[id_category]/page_client-reference-manifest.js",
         "server/middleware-build-manifest.js",
         "server/middleware-react-loadable-manifest.js",
         "server/next-font-manifest.js",
@@ -132,23 +74,51 @@
         "prerender-manifest.js",
         "server/edge-runtime-webpack.js",
         "server/edge-chunks/834.js",
-        "server/edge-chunks/165.js",
-        "server/app/administrator/inventories/[id_inventory]/page.js"
+        "server/app/administrator/categories/[id_category]/page.js"
       ],
-      "name": "app/administrator/inventories/[id_inventory]/page",
-      "page": "/administrator/inventories/[id_inventory]/page",
+      "name": "app/administrator/categories/[id_category]/page",
+      "page": "/administrator/categories/[id_category]/page",
       "matchers": [
         {
-          "regexp": "^/administrator/inventories/(?<id_inventory>[^/]+?)$",
-          "originalSource": "/administrator/inventories/[id_inventory]"
+          "regexp": "^/administrator/categories/(?<id_category>[^/]+?)$",
+          "originalSource": "/administrator/categories/[id_category]"
         }
       ],
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
+      }
+    },
+    "/administrator/categories/list/[id_list]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/categories/list/[id_list]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/administrator/categories/list/[id_list]/page.js"
+      ],
+      "name": "app/administrator/categories/list/[id_list]/page",
+      "page": "/administrator/categories/list/[id_list]/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/categories/list/(?<id_list>[^/]+?)$",
+          "originalSource": "/administrator/categories/list/[id_list]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
       }
     },
     "/administrator/categories/list/page": {
@@ -176,9 +146,39 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
+      }
+    },
+    "/administrator/inventories/[id_inventory]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/inventories/[id_inventory]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/edge-chunks/165.js",
+        "server/app/administrator/inventories/[id_inventory]/page.js"
+      ],
+      "name": "app/administrator/inventories/[id_inventory]/page",
+      "page": "/administrator/inventories/[id_inventory]/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/inventories/(?<id_inventory>[^/]+?)$",
+          "originalSource": "/administrator/inventories/[id_inventory]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
       }
     },
     "/administrator/products/[id_product]/page": {
@@ -206,9 +206,67 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
+      }
+    },
+    "/ecommerce/pdp/[id_product]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/ecommerce/pdp/[id_product]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/ecommerce/pdp/[id_product]/page.js"
+      ],
+      "name": "app/ecommerce/pdp/[id_product]/page",
+      "page": "/ecommerce/pdp/[id_product]/page",
+      "matchers": [
+        {
+          "regexp": "^/ecommerce/pdp/(?<id_product>[^/]+?)$",
+          "originalSource": "/ecommerce/pdp/[id_product]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
+      }
+    },
+    "/ecommerce/categories/[id_category]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/ecommerce/categories/[id_category]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/ecommerce/categories/[id_category]/page.js"
+      ],
+      "name": "app/ecommerce/categories/[id_category]/page",
+      "page": "/ecommerce/categories/[id_category]/page",
+      "matchers": [
+        {
+          "regexp": "^/ecommerce/categories/(?<id_category>[^/]+?)$",
+          "originalSource": "/ecommerce/categories/[id_category]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
       }
     },
     "/administrator/products/list/[id_list]/page": {
@@ -239,67 +297,9 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
-      }
-    },
-    "/ecommerce/categories/[id_category]/page": {
-      "files": [
-        "server/server-reference-manifest.js",
-        "server/app/ecommerce/categories/[id_category]/page_client-reference-manifest.js",
-        "server/middleware-build-manifest.js",
-        "server/middleware-react-loadable-manifest.js",
-        "server/next-font-manifest.js",
-        "server/interception-route-rewrite-manifest.js",
-        "prerender-manifest.js",
-        "server/edge-runtime-webpack.js",
-        "server/edge-chunks/834.js",
-        "server/app/ecommerce/categories/[id_category]/page.js"
-      ],
-      "name": "app/ecommerce/categories/[id_category]/page",
-      "page": "/ecommerce/categories/[id_category]/page",
-      "matchers": [
-        {
-          "regexp": "^/ecommerce/categories/(?<id_category>[^/]+?)$",
-          "originalSource": "/ecommerce/categories/[id_category]"
-        }
-      ],
-      "wasm": [],
-      "assets": [],
-      "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
-      }
-    },
-    "/ecommerce/pdp/[id_product]/page": {
-      "files": [
-        "server/server-reference-manifest.js",
-        "server/app/ecommerce/pdp/[id_product]/page_client-reference-manifest.js",
-        "server/middleware-build-manifest.js",
-        "server/middleware-react-loadable-manifest.js",
-        "server/next-font-manifest.js",
-        "server/interception-route-rewrite-manifest.js",
-        "prerender-manifest.js",
-        "server/edge-runtime-webpack.js",
-        "server/edge-chunks/834.js",
-        "server/app/ecommerce/pdp/[id_product]/page.js"
-      ],
-      "name": "app/ecommerce/pdp/[id_product]/page",
-      "page": "/ecommerce/pdp/[id_product]/page",
-      "matchers": [
-        {
-          "regexp": "^/ecommerce/pdp/(?<id_product>[^/]+?)$",
-          "originalSource": "/ecommerce/pdp/[id_product]"
-        }
-      ],
-      "wasm": [],
-      "assets": [],
-      "environments": {
-        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
-        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
-        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
+        "previewModeId": "866566b275ad59c2c7def179ebaf5848",
+        "previewModeSigningKey": "80f73bd962d21853821674f411d916a6a8848fa413e55ad07124c881a09542dc",
+        "previewModeEncryptionKey": "b4b41a6ac47a26ef6e85183dab1f6a6854c70edab85a93931c53b543ec0f58ec"
       }
     }
   },
