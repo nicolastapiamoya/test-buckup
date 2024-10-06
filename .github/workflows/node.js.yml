@@ -22,11 +22,15 @@ jobs:
 
     - run: npm cache clean --force
 
-    - run: npm i
+    - run: npm install
 
-    - run: export NODE_ENV=production 
-    
+    - run: |
+        echo "NODE_ENV=production" >> $GITHUB_ENV
+
     - run: npm run build --if-present
+      env:
+        NODE_ENV: production
+
+    - run: npm ls  # Verificar que todas las dependencias estén instaladas
 
     - run: pm2 reload 0
-
