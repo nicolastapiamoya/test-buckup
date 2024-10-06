@@ -24,7 +24,7 @@ jobs:
 
     - run: npm ci
 
-    - run: next build  # Esto construye tu app de Next.js
+    - run: npx next build  # Esto construye tu app de Next.js
 
     - name: Start PM2 Server
       run: pm2 start npm --name "next-test-prod" -- start  # Inicia el servidor con PM2 en producción
