@@ -26,9 +26,67 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
+      }
+    },
+    "/administrator/categories/list/[id_list]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/categories/list/[id_list]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/administrator/categories/list/[id_list]/page.js"
+      ],
+      "name": "app/administrator/categories/list/[id_list]/page",
+      "page": "/administrator/categories/list/[id_list]/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/categories/list/(?<id_list>[^/]+?)$",
+          "originalSource": "/administrator/categories/list/[id_list]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
+      }
+    },
+    "/administrator/categories/[id_category]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/categories/[id_category]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/administrator/categories/[id_category]/page.js"
+      ],
+      "name": "app/administrator/categories/[id_category]/page",
+      "page": "/administrator/categories/[id_category]/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/categories/(?<id_category>[^/]+?)$",
+          "originalSource": "/administrator/categories/[id_category]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
       }
     },
     "/administrator/categories/create/page": {
@@ -58,67 +116,9 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
-      }
-    },
-    "/administrator/categories/list/[id_list]/page": {
-      "files": [
-        "server/server-reference-manifest.js",
-        "server/app/administrator/categories/list/[id_list]/page_client-reference-manifest.js",
-        "server/middleware-build-manifest.js",
-        "server/middleware-react-loadable-manifest.js",
-        "server/next-font-manifest.js",
-        "server/interception-route-rewrite-manifest.js",
-        "prerender-manifest.js",
-        "server/edge-runtime-webpack.js",
-        "server/edge-chunks/834.js",
-        "server/app/administrator/categories/list/[id_list]/page.js"
-      ],
-      "name": "app/administrator/categories/list/[id_list]/page",
-      "page": "/administrator/categories/list/[id_list]/page",
-      "matchers": [
-        {
-          "regexp": "^/administrator/categories/list/(?<id_list>[^/]+?)$",
-          "originalSource": "/administrator/categories/list/[id_list]"
-        }
-      ],
-      "wasm": [],
-      "assets": [],
-      "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
-      }
-    },
-    "/administrator/categories/[id_category]/page": {
-      "files": [
-        "server/server-reference-manifest.js",
-        "server/app/administrator/categories/[id_category]/page_client-reference-manifest.js",
-        "server/middleware-build-manifest.js",
-        "server/middleware-react-loadable-manifest.js",
-        "server/next-font-manifest.js",
-        "server/interception-route-rewrite-manifest.js",
-        "prerender-manifest.js",
-        "server/edge-runtime-webpack.js",
-        "server/edge-chunks/834.js",
-        "server/app/administrator/categories/[id_category]/page.js"
-      ],
-      "name": "app/administrator/categories/[id_category]/page",
-      "page": "/administrator/categories/[id_category]/page",
-      "matchers": [
-        {
-          "regexp": "^/administrator/categories/(?<id_category>[^/]+?)$",
-          "originalSource": "/administrator/categories/[id_category]"
-        }
-      ],
-      "wasm": [],
-      "assets": [],
-      "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
       }
     },
     "/administrator/inventories/[id_inventory]/page": {
@@ -146,9 +146,9 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
       }
     },
     "/administrator/categories/list/page": {
@@ -176,9 +176,9 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
       }
     },
     "/administrator/products/[id_product]/page": {
@@ -206,9 +206,9 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
       }
     },
     "/administrator/products/list/[id_list]/page": {
@@ -239,9 +239,9 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
       }
     },
     "/ecommerce/categories/[id_category]/page": {
@@ -268,9 +268,9 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
       }
     },
     "/ecommerce/pdp/[id_product]/page": {
@@ -297,9 +297,9 @@
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
-        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
-        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+        "previewModeId": "f91a6d35a3d037965ce8d44350db0b6a",
+        "previewModeSigningKey": "1534949552a1146a62b2b77052891a44bfc4e997727c70cd4f7b047a59f188b1",
+        "previewModeEncryptionKey": "914b92df61ab447b5d5dff5edc3d2f7ee5549750f43d63da17d5e0d362751979"
       }
     }
   },
