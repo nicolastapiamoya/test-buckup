@@ -1,0 +1,307 @@
+{
+  "version": 3,
+  "middleware": {},
+  "functions": {
+    "/administrator/categories/list/create/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/categories/list/create/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/administrator/categories/list/create/page.js"
+      ],
+      "name": "app/administrator/categories/list/create/page",
+      "page": "/administrator/categories/list/create/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/categories/list/create$",
+          "originalSource": "/administrator/categories/list/create"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    },
+    "/administrator/categories/create/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/categories/create/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/edge-chunks/165.js",
+        "server/edge-chunks/133.js",
+        "server/edge-chunks/744.js",
+        "server/app/administrator/categories/create/page.js"
+      ],
+      "name": "app/administrator/categories/create/page",
+      "page": "/administrator/categories/create/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/categories/create$",
+          "originalSource": "/administrator/categories/create"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    },
+    "/administrator/categories/list/[id_list]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/categories/list/[id_list]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/administrator/categories/list/[id_list]/page.js"
+      ],
+      "name": "app/administrator/categories/list/[id_list]/page",
+      "page": "/administrator/categories/list/[id_list]/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/categories/list/(?<id_list>[^/]+?)$",
+          "originalSource": "/administrator/categories/list/[id_list]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    },
+    "/administrator/categories/[id_category]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/categories/[id_category]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/administrator/categories/[id_category]/page.js"
+      ],
+      "name": "app/administrator/categories/[id_category]/page",
+      "page": "/administrator/categories/[id_category]/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/categories/(?<id_category>[^/]+?)$",
+          "originalSource": "/administrator/categories/[id_category]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    },
+    "/administrator/inventories/[id_inventory]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/inventories/[id_inventory]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/edge-chunks/165.js",
+        "server/app/administrator/inventories/[id_inventory]/page.js"
+      ],
+      "name": "app/administrator/inventories/[id_inventory]/page",
+      "page": "/administrator/inventories/[id_inventory]/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/inventories/(?<id_inventory>[^/]+?)$",
+          "originalSource": "/administrator/inventories/[id_inventory]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    },
+    "/administrator/categories/list/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/categories/list/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/edge-chunks/165.js",
+        "server/app/administrator/categories/list/page.js"
+      ],
+      "name": "app/administrator/categories/list/page",
+      "page": "/administrator/categories/list/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/categories/list$",
+          "originalSource": "/administrator/categories/list"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    },
+    "/administrator/products/[id_product]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/products/[id_product]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/edge-chunks/856.js",
+        "server/app/administrator/products/[id_product]/page.js"
+      ],
+      "name": "app/administrator/products/[id_product]/page",
+      "page": "/administrator/products/[id_product]/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/products/(?<id_product>[^/]+?)$",
+          "originalSource": "/administrator/products/[id_product]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    },
+    "/administrator/products/list/[id_list]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/administrator/products/list/[id_list]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/edge-chunks/165.js",
+        "server/edge-chunks/856.js",
+        "server/edge-chunks/133.js",
+        "server/edge-chunks/744.js",
+        "server/app/administrator/products/list/[id_list]/page.js"
+      ],
+      "name": "app/administrator/products/list/[id_list]/page",
+      "page": "/administrator/products/list/[id_list]/page",
+      "matchers": [
+        {
+          "regexp": "^/administrator/products/list/(?<id_list>[^/]+?)$",
+          "originalSource": "/administrator/products/list/[id_list]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    },
+    "/ecommerce/categories/[id_category]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/ecommerce/categories/[id_category]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/ecommerce/categories/[id_category]/page.js"
+      ],
+      "name": "app/ecommerce/categories/[id_category]/page",
+      "page": "/ecommerce/categories/[id_category]/page",
+      "matchers": [
+        {
+          "regexp": "^/ecommerce/categories/(?<id_category>[^/]+?)$",
+          "originalSource": "/ecommerce/categories/[id_category]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    },
+    "/ecommerce/pdp/[id_product]/page": {
+      "files": [
+        "server/server-reference-manifest.js",
+        "server/app/ecommerce/pdp/[id_product]/page_client-reference-manifest.js",
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/edge-chunks/834.js",
+        "server/app/ecommerce/pdp/[id_product]/page.js"
+      ],
+      "name": "app/ecommerce/pdp/[id_product]/page",
+      "page": "/ecommerce/pdp/[id_product]/page",
+      "matchers": [
+        {
+          "regexp": "^/ecommerce/pdp/(?<id_product>[^/]+?)$",
+          "originalSource": "/ecommerce/pdp/[id_product]"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7b9f7ab8e2eec04d0244b41d7cbbed6c",
+        "previewModeSigningKey": "250a6f64ab697492d32be83e408b4e26ef61fe5b94915402b782668a4dcc6545",
+        "previewModeEncryptionKey": "0a8ac094bcd8655bf7351f2efb4ceefebc3613abf4c5d7310dbf54eb45e2379f"
+      }
+    }
+  },
+  "sortedMiddleware": []
+}
