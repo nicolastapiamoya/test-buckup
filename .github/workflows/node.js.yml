@@ -20,6 +20,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
+    - run: npm cache clean --force
+
     - run: npm ci
 
     - run: export NODE_ENV=production 
