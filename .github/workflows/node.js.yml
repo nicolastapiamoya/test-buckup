@@ -9,7 +9,7 @@ jobs:
     runs-on: self-hosted  # Usa self-hosted si tienes un runner propio
     strategy:
       matrix:
-        node-version: [20.18.0]
+        node-version: [22.8.0]
     
     steps:
     - uses: actions/checkout@v4
