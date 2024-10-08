@@ -34,12 +34,13 @@ export default function HeaderPage() {
     ]);
 
     const dummyProducts = [
-        "Smartphone",
-        "Laptop",
-        "Headphones",
-        "Smart Watch",
-        "Tablet",
-        "Camera",
+        "Perro",
+        "Gato",
+        "Masterdog",
+        "Mastercat",
+        "Braberi",
+        "Mastermouse",
+        "Ekos",
     ];
 
     const menuRef = useRef(null); // Create a ref for the menu
@@ -99,7 +100,7 @@ export default function HeaderPage() {
                         <form onSubmit={handleSearch}>
                             <input
                                 type="text"
-                                placeholder="Search products..."
+                                placeholder="buscar productos..."
                                 className="w-full py-2 px-4 pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
