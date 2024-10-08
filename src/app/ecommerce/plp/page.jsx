@@ -272,7 +272,7 @@ const ProductCatalog = () => {
 }
 
 
-export default function page() {
+export default function Page() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <ProductCatalog></ProductCatalog>
