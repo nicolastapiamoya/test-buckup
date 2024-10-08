@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { LayoutGrid, List, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -21,7 +21,7 @@ const products = [
     { id: 11, name: "Product 11", price: 59.99, category: "Gato", image: 'https://30c5ab-27.myshopify.com/cdn/shop/files/ALIMENTO_PARA_GATOS_EKOS_CAT_GATO_10_KG.jpg?v=1719610200&width=360', brand: 'Mastercat' },
 ];
 
-const ProductCatalog = () => {
+export default ProductCatalog = () => {
     const [viewType, setViewType] = useState("grid");
     const [sortOrder, setSortOrder] = useState("asc");
     const [currentPage, setCurrentPage] = useState(1);
@@ -269,13 +269,4 @@ const ProductCatalog = () => {
         </div>
 
     );
-}
-
-
-export default function page() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProductCatalog></ProductCatalog>
-    </Suspense>
-  )
 }
