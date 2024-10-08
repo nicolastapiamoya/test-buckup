@@ -175,17 +175,17 @@ export default function HeaderPage() {
                             </Link>
                         </div>
                         <div className="p-4 flex flex-col">
-                            <Link href="/ecommerce/pdp/2" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                            <Link href="/ecommerce/plp?ctg=Perro" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
                                 Perros
                             </Link>
-                            <Link href="#" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                            <Link href="/ecommerce/plp?ctg=Gato" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
                                 Gatos
                             </Link>
-                            <Link href="#" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                                Farmacia
+                            <Link href="/ecommerce/plp" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                                Peces
                             </Link>
-                            <Link href="#" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                                Alimentos
+                            <Link href="/ecommerce/plp?ctg=Hamster" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                                Hamster
                             </Link>
                         </div>
                     </motion.div>
