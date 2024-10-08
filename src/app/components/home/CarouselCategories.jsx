@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 
 export default function CarouselCategories() {
@@ -14,32 +14,38 @@ export default function CarouselCategories() {
         {
             id_category: 1,
             name: 'Gatos',
-            image_category: '/categories/cat.avif'
+            image_category: '/categories/cat.avif',
+            path: 'Gato'
         },
         {
             id_category: 2,
             name: 'Perros',
-            image_category: '/categories/dog.avif'
+            image_category: '/categories/dog.avif',
+            path: 'Perro'
         },
         {
             id_category: 3,
             name: 'Peces',
-            image_category: '/categories/fish.avif'
+            image_category: '/categories/fish.avif',
+            path: 'Peces'
         },
         {
             id_category: 4,
             name: 'Gallinas',
-            image_category: '/categories/4.avif'
+            image_category: '/categories/4.avif',
+            path: 'Peces'
         },
         {
             id_category: 5,
             name: 'Caballos',
-            image_category: '/categories/5.avif'
+            image_category: '/categories/5.avif',
+            path: 'Peces'
         },
         {
             id_category: 6,
             name: 'Loros',
-            image_category: '/categories/6.avif'
+            image_category: '/categories/6.avif',
+            path: 'Peces'
         }
     ]
 
@@ -92,7 +98,7 @@ export default function CarouselCategories() {
                 {categories.length > 0 ? categories.map((ctg, index) => (
                     <SwiperSlide key={index}>
                         <div className="mt-10 rounded-lg p-8 mx-12 flex justify-center">
-                            <Link href={`/ecommerce/categories/${ctg.id_category}`} className="">
+                            <Link href={`/ecommerce/plp?ctg=${ctg.path}`} className="">
                                 <div className=" shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 border-gray-900 rounded-full h-40 w-40 p-0.5 flex-col justify-center items-center" key={index}>
                                     <img
                                         key={index}
