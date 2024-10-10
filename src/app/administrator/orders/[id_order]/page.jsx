@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React, { useState } from "react";
 import { FaShippingFast, FaCreditCard, FaPaypal, FaStar, FaCalendarAlt, FaBox } from "react-icons/fa";
 
-export default function page({ params }) {
+export default function Page({ params }) {
     /*     const idOrder = params.id_order
         const order = await orderById(idOrder)
         const idCart = order[0].id_shopping_cart

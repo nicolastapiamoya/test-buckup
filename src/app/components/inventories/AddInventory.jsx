@@ -112,7 +112,7 @@ export default function AddInventory() {
                     </div>
                 </div>
                 {product.length > 0 ? product.map((prd, index) => (
-                    <input name="master" value={prd.master} hidden={true}/>
+                    <input key={index} name="master" value={prd.master} hidden={true}/>
                 )): <></>}
                 
                 <div className="w-full px-3 mb-6 mt-0 sm:mt-0 md:mt-4 lg:mt-4 xl:mt-0 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0">

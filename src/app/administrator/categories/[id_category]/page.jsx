@@ -53,7 +53,7 @@ export default async function page(params) {
                     <form className="w-full max-w-3xl mt-10 mb-10" action={updateCategory}>
                         {
                             category.map((ctg, index) => (
-                                <div className="flex flex-wrap -mx-3 mb-6">
+                                <div className="flex flex-wrap -mx-3 mb-6" key={index}>
                                     <div className="w-full md:w-1/2 px-3 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0">
                                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
                                             Nombre categoría
