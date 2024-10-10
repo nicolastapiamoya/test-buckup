@@ -21,7 +21,7 @@ export default function TableClient({ client }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {client.map((item, index) => (
+                    {client ? client.map((item, index) => (
                         <tr key={index}>
                             <td className="border px-4 py-1 text-sm text-center">{item.id_client}</td>
                             <td className="border px-4 py-1 text-sm">{item.name}</td>
@@ -41,7 +41,7 @@ export default function TableClient({ client }) {
                                 <DeleteButtonServer id_client={item.id_client}></DeleteButtonServer>
                             </td>
                         </tr>
-                    ))}
+                    )): <>Sin data</>}
                 </tbody>
             </table>
         </div>

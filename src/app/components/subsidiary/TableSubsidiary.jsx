@@ -16,7 +16,7 @@ export default function TableSubsidiary({ subsidiary }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {subsidiary.map((item, index) => (
+                    {subsidiary ? subsidiary.map((item, index) => (
                         <tr key={item.id}>
                             <td className="border px-4 py-1 text-sm text-center">{item.id_sucursal}</td>
                             <td className="border px-4 py-1 text-sm">{item.name}</td>
@@ -34,7 +34,7 @@ export default function TableSubsidiary({ subsidiary }) {
                                 </button>
                             </td>
                         </tr>
-                    ))}
+                    )) : <>Sin data</>}
                 </tbody>
             </table>
         </div>

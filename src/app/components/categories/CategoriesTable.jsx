@@ -52,7 +52,7 @@ export default async function CategoriesTable({ categories }) {
                                 <DeleteButtonServer id_category={ctg.id_category}></DeleteButtonServer>
                             </td>
                         </tr>
-                    )) : <></>}
+                    )) : <>Sin data</>}
                 </tbody>
             </table>
 
