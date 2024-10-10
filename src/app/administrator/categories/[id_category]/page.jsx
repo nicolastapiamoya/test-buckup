@@ -6,7 +6,7 @@ import React from 'react'
 import * as IconLu from "react-icons/lu";
 import Swal from 'sweetalert2';
 
-export default async function page(params) {
+export default async function Page(params) {
 
     const id = params.params.id_category
     const category = await categoriesById(id)

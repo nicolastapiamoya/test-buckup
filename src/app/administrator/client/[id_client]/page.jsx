@@ -6,7 +6,7 @@ import { formUpdateClient } from '@/app/actions/actions';
 import Swal from 'sweetalert2';
 import { redirect } from 'next/navigation';
 
-export default async function page({ params }) {
+export default async function Page({ params }) {
     const id = params.id_client
     const items = await ClientById(id)
 

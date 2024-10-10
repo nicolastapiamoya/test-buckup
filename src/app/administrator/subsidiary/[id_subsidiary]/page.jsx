@@ -5,7 +5,7 @@ import * as IconLu from "react-icons/lu";
 import { formUpdateSubsidiary } from '@/app/actions/actions';
 import { redirect } from 'next/navigation';
 
-export default async function page({params}) {
+export default async function Page({params}) {
     const id = params.id_subsidiary
     const items = await subsidiaryById(id)
 

@@ -4,7 +4,7 @@ import * as IconLu from "react-icons/lu";
 import { FiCheck, FiHome, FiUser, FiX } from "react-icons/fi";
 import { allClient } from "@/app/api/sales/customer/route";
 
-export default async function page() {
+export default async function Page() {
     const callAllClient = await allClient();
 
     return (
