@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import * as IconLu from "react-icons/lu";
 
-export default function page() {
+export default function Page() {
   return (
     <main className=" flex min-h-screen flex-col px-12 bg-gris">
       <div className="grid grid-cols-1 mt-5">

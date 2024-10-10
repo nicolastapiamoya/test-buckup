@@ -4,7 +4,7 @@ import * as IconLu from "react-icons/lu";
 import { FiCheck, FiHome, FiUser, FiX } from "react-icons/fi";
 import { allSubsidiary } from "@/app/api/sales/subsidiary/route";
 
-export default async function page() {
+export default async function Page() {
     const callAllSubsidiary = await allSubsidiary();
 
     return (
