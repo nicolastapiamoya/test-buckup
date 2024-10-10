@@ -1,36 +1,15 @@
 'use client'
 
 import CarouselProducts from "@/app/components/home/CarouselProducts";
+import mockData from "@/app/utils/MockProducts";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import * as IconLu from "react-icons/lu"
 import { MdErrorOutline } from "react-icons/md";
 
 export default function Page() {
-    const [cartItems, setCartItems] = useState([
-        {
-            id: 1,
-            name: "Alimento para gatos BOREAL",
-            beforePrice: 39.990,
-            price: 29.990,
-            quantity: 2,
-            image: 'https://30c5ab-27.myshopify.com/cdn/shop/files/ALIMENTO_PARA_GATOS_EKOS_CAT_GATO_10_KG.jpg?v=1719610200&width=360',
-            rating: 4,
-            size: "M",
-            sizes: ["S", "M", "L", "XL"]
-        },
-        {
-            id: 2,
-            name: "Alimento para gatos EKOS CAT",
-            beforePrice: 69.990,
-            price: 59.990,
-            quantity: 1,
-            image: "https://30c5ab-27.myshopify.com/cdn/shop/files/BOREAL_ORIGINAL_GATO_FISH_TRIO_2_26KG_SUPER_PREMIUM.jpg?v=1719610191&width=360",
-            rating: 5,
-            size: "32",
-            sizes: ["28", "30", "32", "34", "36"]
-        }
-    ]);
+    const [cartItems, setCartItems] = useState(mockData.MockProductCart);
 
     const [cardDetails, setCardDetails] = useState({
         number: "",
@@ -133,7 +112,7 @@ export default function Page() {
                             </div>
 
                             <div className="flex items-center justify-between mb-4">
-                                <img src={item.image} alt={item.name} className="w-36 h-32 object-cover rounded-md" />
+                                <Link href="/ecommerce/pdp/1" className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 m-0"><img src={item.image} alt={item.name} className="w-36 h-32 object-cover rounded-md" /></Link>
                                 <div className="flex-1 ml-4">
                                     <h2 className="text-xl font-semibold">{item.name}</h2>
                                     <p className="text-sm text-gray-600 line-through">${item.beforePrice.toFixed(2)}</p>

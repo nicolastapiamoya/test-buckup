@@ -1,5 +1,5 @@
 export const configHost = {
-    host: 'http://localhost:8080',
+    host: 'http://195.200.4.117:8080',
 }
 
 export const MEHTOD = {

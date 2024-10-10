@@ -6,6 +6,7 @@ import Loader from '../Loader';
 import Swal from 'sweetalert2';
 import ModalAddImageVariant from './ModalAddImageVariant';
 import { updateVariant } from '@/app/api/catalog/product/route';
+import * as IconLu from "react-icons/lu";
 
 export default function ImageVariant({ variant, callProductById }) {
 
@@ -131,14 +132,14 @@ export default function ImageVariant({ variant, callProductById }) {
                                 onClick={handlePrev}
                                 className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-black p-2 rounded-full hover:bg-gray-600"
                             >
-                                &#9664;
+                               <IconLu.LuArrowBigLeft className='text-white items-center flex justify-center w-6 h-6'/>
                             </button>
 
                             <button
                                 onClick={handleNext}
                                 className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-black p-2 rounded-full hover:bg-gray-600"
                             >
-                                &#9654;
+                               <IconLu.LuArrowBigRight className='text-white items-center flex justify-center w-6 h-6'/>
                             </button>
                             {images.length > 0 ? 
                             <button
@@ -159,7 +160,7 @@ export default function ImageVariant({ variant, callProductById }) {
                         </div>
                         <div className="flex justify-center mt-3">
                             <button
-                                className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                 type="button"
                                 onClick={hanldeAddImageVariant}
                             >
@@ -174,7 +175,7 @@ export default function ImageVariant({ variant, callProductById }) {
                             </label>
                             <div className="flex justify-center mt-3">
                                 <button
-                                    className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                    className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                     type="button"
                                     onClick={hanldeAddImageVariant}
                                 >
@@ -201,7 +202,7 @@ export default function ImageVariant({ variant, callProductById }) {
                         <div className="w-full  px-3 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0 mt-8">
                             <div className="flex justify-center">
                                 <button
-                                    className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                    className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                     type="submit">
                                     Agregar
                                 </button>

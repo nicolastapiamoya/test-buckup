@@ -239,7 +239,7 @@ export default function VariantProduct({ product, callProductById }) {
                                                                 <div className="w-full px-3 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0 mb-3">
                                                                     <div className="flex justify-center">
                                                                         <button
-                                                                            className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                                                            className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                                                             type="submit"
                                                                             
                                                                         >
@@ -258,7 +258,7 @@ export default function VariantProduct({ product, callProductById }) {
                                                             <div className="w-full px-3 mb-3 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0">
                                                                 <div className="flex justify-center">
                                                                     <button
-                                                                        className="bg-naranja w-64 hover:bg-hover-celeste sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                                                        className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-naranja w-64 hover:bg-hover-celeste sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                                                         type="button"
                                                                         onClick={()=>handleDeleteVariation(variant.id_product_variation)}
                                                                     >
@@ -277,7 +277,7 @@ export default function VariantProduct({ product, callProductById }) {
                     </div>
                     <div className="col-span-2 flex justify-center mb-10 lg:mb-0 xl:mb-0 mt-10">
                         <button
-                            className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center" type="button"
+                            className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center" type="button"
                             onClick={handleAddVariation}>
                             Añadir variación
                         </button>
@@ -312,7 +312,7 @@ export default function VariantProduct({ product, callProductById }) {
                         <div className="w-full  px-3 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0 mt-8">
                             <div className="flex justify-center">
                                 <button
-                                    className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                    className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                     type="submit">
                                     Agregar
                                 </button>

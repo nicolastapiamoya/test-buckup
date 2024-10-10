@@ -1,7 +1,6 @@
 
 import Link from "next/link";
-
-
+import * as IconLu from "react-icons/lu";
 
 export default function ListCategoryTable() {
 
@@ -12,7 +11,7 @@ export default function ListCategoryTable() {
             description: 'lista de categorías para promoción de un 40% en las categorias poleras mujer, ropa interior mujer, pantalones mujer'
         }
     ]
-    
+
     return (
         <div className='overflow-x-auto'>
             <table className="table-fixed mb-3 mt-5 inline-block">
@@ -25,19 +24,23 @@ export default function ListCategoryTable() {
                     </tr>
                 </thead>
                 <tbody>
-                {lists.map((list, index) => (
+                    {lists.map((list, index) => (
                         <tr key={`${list.id_list_category}-${index}`}>
                             <td className="border px-4 py-1 text-sm">{list.id_list_category}</td>
                             <td className="border px-4 py-1 text-sm">{list.name}</td>
                             <td className="border px-4 py-1 text-sm">{list.description}</td>
                             <td className="border px-4 py-1">
-                                <Link className="bg-celeste hover:bg-hover-celeste text-white font-bold py-1 px-4 rounded-full" href={`/administrator/categories/list/1`}>
-                                    Agrega categorías
+                                <Link href={`/administrator/categories/list/1`}>
+                                    <div className="bg-celeste hover:bg-hover-celeste text-white font-bold py-1 px-4 rounded-full shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                                        <IconLu.LuEye />
+                                    </div>
                                 </Link>
                             </td>
                             <td className="border px-4 py-1">
-                            <Link className="bg-naranja hover:bg-hover-celeste text-white font-bold py-1 px-4 rounded-full" href={`#`}>
-                                    Eliminar
+                                <Link href={`#`}>
+                                    <div className="bg-naranja hover:bg-orange-300 text-white font-bold py-1 px-4 rounded-full shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                                        <IconLu.LuTrash />
+                                    </div>
                                 </Link>
                             </td>
                         </tr>

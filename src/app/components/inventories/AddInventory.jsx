@@ -14,15 +14,15 @@ export default function AddInventory() {
     const [hiddenProduct, setHiddenProduct] = useState(true)
     const [hiddenVariant, setHiddenVariant] = useState(true)
 
+    async function callSubsidiary() {
+        const sucursales = await allSubsidiary()
+        setSubsidiary(sucursales)
+    }
+
     async function callProducts(id) {
         const productCall = await productListnotSubsidiayById(id)
         setProduct(productCall)
         setHiddenProduct(false)
-    }
-
-    async function callSubsidiary() {
-        const sucursales = await allSubsidiary()
-        setSubsidiary(sucursales)
     }
 
     async function callVariant(id) {
@@ -39,6 +39,7 @@ export default function AddInventory() {
     const handleChangeSubsidiary = async (e) => {
         const idSucurcal = e.target.value
         const product = await callProducts(idSucurcal)
+        console.log(product)
         if(product){
             setVariant(product.variationbyinventory)
             setHiddenProduct(true)
@@ -111,7 +112,7 @@ export default function AddInventory() {
                     </div>
                 </div>
                 {product.length > 0 ? product.map((prd, index) => (
-                    <input key={index} name="master" value={prd.master} hidden={true}/>
+                    <input name="master" value={prd.master} hidden={true}/>
                 )): <></>}
                 
                 <div className="w-full px-3 mb-6 mt-0 sm:mt-0 md:mt-4 lg:mt-4 xl:mt-0 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0">
@@ -154,7 +155,7 @@ export default function AddInventory() {
                 </div>
             </div>
             <div className="flex justify-center">
-                <button className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center" href='/administrator/users' type="submit">
+                <button className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center" href='/administrator/users' type="submit">
                     Agregar inventario
                 </button>
             </div>

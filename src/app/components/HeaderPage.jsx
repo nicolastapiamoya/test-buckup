@@ -4,34 +4,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { FiMenu, FiUser, FiShoppingCart, FiSearch } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import MiniCart from './cart/MiniCart';
+import mockData from '../utils/MockProducts';
 
 export default function HeaderPage() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
     const [searchSuggestions, setSearchSuggestions] = useState([]);
-    const [cartItems, setCartItems] = useState([
-        {
-            id: 1,
-            name: "Stylish T-Shirt",
-            price: 29990,
-            quantity: 2,
-            image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-            rating: 4,
-            size: "M",
-            sizes: ["S", "M", "L", "XL"]
-        },
-        {
-            id: 2,
-            name: "Comfortable Jeans",
-            price: 59990,
-            quantity: 1,
-            image: "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-            rating: 5,
-            size: "32",
-            sizes: ["28", "30", "32", "34", "36"]
-        }
-    ]);
+    const [cartItems, setCartItems] = useState(mockData.MockProductCart);
 
     const dummyProducts = [
         "Perro",
@@ -155,65 +135,74 @@ export default function HeaderPage() {
                 </div>
             </div>
             {/* Slide-in Menu */}
-            <AnimatePresence>
-                {isMenuOpen && (
-                    <motion.div
-                        ref={menuRef} // Attach the ref to the menu
-                        initial={{ x: "-100%" }}
-                        animate={{ x: 0 }}
-                        exit={{ x: "-100%" }}
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="fixed inset-y-0 left-0 w-64 bg-primary shadow-xl z-50">
-                        <div className="flex justify-end">
-                            <IconLu.LuX className="cursor-pointer mr-5 mt-5 text-white border border-solid rounded-md w-5 h-5 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105" onClick={() => setIsMenuOpen(false)} />
-                        </div>
-                        <div className="flex justify-center">
-                            <Link href="/">
-                                <img
-                                    src="https://30c5ab-27.myshopify.com/cdn/shop/files/Mesa_de_trabajo_4.png?v=1719537986&width=210"
-                                    className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 w-36 h-14 px-2 py-1 rounded-md flex justify-center bg-primary"
+            <div className={`fixed inset-0 flex justify-center items-center transition-colors overflow-auto ${isMenuOpen ? "visible bg-black/50" : "invisible"}`} style={{ zIndex: 1000 }}>
+                <AnimatePresence>
+                    {isMenuOpen && (
+                        <motion.div
+                            ref={menuRef}
+                            initial={{ x: "-100%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "-100%" }}
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            className="fixed inset-y-0 left-0 w-80 bg-primary shadow-xl z-50"
+                        >
+                            <div className="flex justify-end">
+                                <IconLu.LuX
+                                    className="cursor-pointer mr-5 mt-5 text-white border border-solid rounded-md w-5 h-5 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                                    onClick={() => setIsMenuOpen(false)}
                                 />
-                            </Link>
-                        </div>
-                        <div className="p-4 flex flex-col">
-                            <Link href="/ecommerce/plp?ctg=Perro" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                                Perros
-                            </Link>
-                            <Link href="/ecommerce/plp?ctg=Gato" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                                Gatos
-                            </Link>
-                            <Link href="/ecommerce/plp" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                                Peces
-                            </Link>
-                            <Link href="/ecommerce/plp?ctg=Hamster" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                                Hamster
-                            </Link>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-            {/* Mini Cart Preview */}
-            <AnimatePresence>
-                {isCartOpen && (
-                    <motion.div
-                        ref={cartRef}
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute right-0 mt-2 w-[400px] bg-white rounded-md shadow-xl z-50 border border-solid"
-                    >
-                        <div className="p-4 w-100">
-                            <div className="flex justify-between mb-2">
-                                <h3 className="text-lg font-semibold">{`Carro (${cartItems.length})`}</h3>
-                                <IconLu.LuX className="cursor-pointer mr-2 text-black border border-solid rounded-md w-8 h-8 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105" onClick={() => setIsCartOpen(false)} />
                             </div>
-                            <MiniCart ></MiniCart>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </nav>
+                            <div className="flex justify-center">
+                                <Link href="/">
+                                    <img
+                                        src="https://30c5ab-27.myshopify.com/cdn/shop/files/Mesa_de_trabajo_4.png?v=1719537986&width=210"
+                                        className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 w-36 h-14 px-2 py-1 rounded-md flex justify-center bg-primary"
+                                    />
+                                </Link>
+                            </div>
+                            <div className="p-4 flex flex-col">
+                                <Link href="/ecommerce/plp?ctg=Perro" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105" onClick={() => setIsMenuOpen(false)}>
+                                    Perros
+                                </Link>
+                                <Link href="/ecommerce/plp?ctg=Gato" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105" onClick={() => setIsMenuOpen(false)}>
+                                    Gatos
+                                </Link>
+                                <Link href="/ecommerce/plp" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105" onClick={() => setIsMenuOpen(false)}>
+                                    Peces
+                                </Link>
+                                <Link href="/ecommerce/plp?ctg=Hamster" className="w-full text-white hover:text-gray-200 mb-2 border border-solid m-auto p-3 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105" onClick={() => setIsMenuOpen(false)}>
+                                    Hamster
+                                </Link>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
+            <div className={`fixed inset-0 flex justify-center items-start transition-colors overflow-auto ${isCartOpen ? "visible bg-black/50" : "invisible"}`} style={{ zIndex: 1000 }}>
+    <AnimatePresence>
+        {isCartOpen && (
+            <motion.div
+                ref={cartRef}
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: 0.2 }}
+                className="fixed top-0 right-0 w-[400px] max-h-full bg-white rounded-md shadow-xl z-50 border border-solid overflow-y-auto" 
+            >
+                <div className="p-4 w-full">
+                    <div className="flex justify-between mb-2">
+                        <h3 className="text-lg font-semibold">{`Carro (${cartItems.length})`}</h3>
+                        <IconLu.LuX className="cursor-pointer mr-2 text-black border border-solid rounded-md w-8 h-8 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105" onClick={() => setIsCartOpen(false)} />
+                    </div>
+                    <MiniCart onCartClose={() => setIsCartOpen(false)} />
+                </div>
+            </motion.div>
+        )}
+    </AnimatePresence>
+</div>
+
+
+        </nav >
     );
 }
 
