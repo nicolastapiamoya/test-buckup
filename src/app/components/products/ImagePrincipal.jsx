@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { updateProduct } from '@/app/api/catalog/product/route';
 import Loader from '../Loader';
 import Swal from 'sweetalert2';
+import * as IconLu from "react-icons/lu";
 
 export default function ImagePrincipal({ product, callProductById }) {
 
@@ -128,21 +129,22 @@ export default function ImagePrincipal({ product, callProductById }) {
 
                             <button
                                 onClick={handlePrev}
-                                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-black p-2 rounded-full hover:bg-naranja"
+                                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-black p-2 rounded-full hover:bg-naranja w-10 h-10"
                             >
-                                &#9664;
+                                 <IconLu.LuArrowBigLeft className='text-white items-center flex justify-center w-6 h-6'/>
+                                
                             </button>
 
                             <button
                                 onClick={handleNext}
-                                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-black p-2 rounded-full hover:bg-gray-600"
+                                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-black p-2 rounded-full hover:bg-gray-600 w-10 h-10"
                             >
-                                &#9654;
+                              <IconLu.LuArrowBigRight className='text-white items-center flex justify-center  w-6 h-6'/>
                             </button>
 
                             {images.length > 0 && (
                                 <button
-                                    className="absolute bottom-11 left-5 bg-primary w-48 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                    className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 absolute bottom-11 left-5 bg-primary w-48 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                     type="button"
                                     onClick={() => handleDeleteImagePrincipal(currentIndex)}
                                 >
@@ -163,7 +165,7 @@ export default function ImagePrincipal({ product, callProductById }) {
 
                         <div className="flex justify-center mt-3">
                             <button
-                                className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                 type="button"
                                 onClick={hanldeAddImagePrincipal}
                             >
@@ -180,7 +182,7 @@ export default function ImagePrincipal({ product, callProductById }) {
                             </label>
                             <div className="flex justify-center mt-3">
                                 <button
-                                    className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                    className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                     type="button"
                                     onClick={hanldeAddImagePrincipal}
                                 >
@@ -206,7 +208,7 @@ export default function ImagePrincipal({ product, callProductById }) {
                         <div className="w-full  px-3 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0 mt-8">
                             <div className="flex justify-center">
                                 <button
-                                    className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                    className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                     type="submit">
                                     Agregar
                                 </button>

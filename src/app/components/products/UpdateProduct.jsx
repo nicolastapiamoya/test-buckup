@@ -167,7 +167,7 @@ export default function UpdateProduct({ id_product }) {
                         </div>
                     </div>
                     <div className="flex justify-center">
-                        <button className="bg-primary w-64 hover:bg-hover-primary   text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center" type="submit">
+                        <button className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary   text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center" type="submit">
                             Actualizar producto
                         </button>
                     </div>

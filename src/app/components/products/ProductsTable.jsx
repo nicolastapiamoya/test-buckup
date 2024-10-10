@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 import Pagination from './Pagination';
 import Link from "next/link";
 import DeleteButtonServer from './DeleteButtonServer';
-
+import * as IconLu from "react-icons/lu";
 
 export default async function ProductsTable({ products, totalPages }) {
 
@@ -59,8 +59,10 @@ export default async function ProductsTable({ products, totalPages }) {
                                     }
                                 </td>
                                 <td className="border px-4 py-1">
-                                    <Link className="bg-celeste hover:bg-hover-celeste text-white font-bold py-1 px-4 rounded-full" href={`/administrator/products/${prd.id_product}`}>
-                                        ver
+                                    <Link  href={`/administrator/products/${prd.id_product}`}>
+                                    <div className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-celeste hover:bg-hover-celeste text-white font-bold py-1 px-4 rounded-full">
+                                        <IconLu.LuEye />
+                                    </div>
                                     </Link>
                                 </td>
                                 <td className="border px-4 py-1">

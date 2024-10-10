@@ -1,5 +1,6 @@
 'use client'
 import CarouselProducts from "@/app/components/home/CarouselProducts";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaStar, FaInfoCircle, FaQuestionCircle } from "react-icons/fa";
 
@@ -82,9 +83,9 @@ export default function Page({ params }) {
                         <span>Have questions about this product?</span>
                     </div>
 
-                    <button className="bg-primary text-white py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                    <Link className="bg-primary text-white py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 text-center" href="/ecommerce/cart/1">
                         Añadir al carro
-                    </button>
+                    </Link>
 
                     <div className="flex items-center text-sm text-gray-500 mt-4">
                         <FaInfoCircle className="mr-2" />

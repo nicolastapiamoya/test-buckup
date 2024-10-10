@@ -1,23 +1,26 @@
 import { inventoryById } from '@/app/api/catalog/inventory/route'
 import Link from 'next/link'
 import React from 'react'
-export const runtime = 'edge'; 
+import * as IconLu from "react-icons/lu";
+
 export default async function page({ params }) {
-    const id = params.id_inventory
-    const inventory = await inventoryById(id)
+    const inventory = await inventoryById(params.id_inventory)
     return (
         <main className=" flex min-h-screen flex-col px-12 bg-gris">
             <div className="grid grid-cols-1 mt-5">
+            <div className="col-span-1 mb-4">
+          <Link href='/administrator/inventories' >
+            <div className="static bg-primary hover:bg-hover-primary w-10 h-10 shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105  flex justify-center items-center text-white font-bold rounded-full focus:outline-none focus:shadow-outline">
+              <IconLu.LuArrowBigLeft />
+            </div>
+          </Link>
+        </div>
                 <div className="py-3 col-span-3 rounded overflow-hidden shadow-lg bg-blanco">
                     <div className="grid grid-cols-8">
                         <div className="col-span-8 sm:col-span-8 md:col-span-2 lg:col-span-2 xl:col-span-2 ml-5 mt-2">
-                            <h1 className="font-semibold text-lg">Actualiza tu inventario</h1>
+                            <h1 className="font-bold text-2xl">Actualiza tu inventario</h1>
                         </div>
-                        <div className="col-span-8 sm:col-span-8 md:col-span-2 lg:col-span-2 xl:col-span-1 mt-5 sm:mt-5 md:mt-0 lg:mt-0 xl:mt-0 flex justify-center">
-                            <Link className="bg-primary hover:bg-hover-primary text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline" href='/administrator/inventories' type="button">
-                                Volver
-                            </Link>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -69,7 +72,7 @@ export default async function page({ params }) {
                         ))}
 
                         <div className="flex justify-center">
-                            <button className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center" type="submit">
+                            <button className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center" type="submit">
                                 Actualizar
                             </button>
                         </div>

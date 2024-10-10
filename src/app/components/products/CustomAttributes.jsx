@@ -136,7 +136,7 @@ export default function CustomAttributes({ product, callProductById }) {
                                 </div>
                                 <div className="col-span-1 flex justify-end">
                                     <button
-                                        className="rounded-md border-solid border-2 py-2 px-4 flex justify-center items-center bg-primary hover:bg-naranja text-white"
+                                        className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 rounded-md border-solid border-2 py-2 px-4 flex justify-center items-center bg-primary hover:bg-naranja text-white"
                                         onClick={()=>handleDeleteAttribute(attr.key)}>X</button>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@ export default function CustomAttributes({ product, callProductById }) {
                 <div className="w-full  px-3 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0 mt-10 mb-5">
                     <div className="flex justify-center">
                         <button
-                            className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                            className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                             onClick={handleAddAttribute}
                             type="button">
 
@@ -176,7 +176,7 @@ export default function CustomAttributes({ product, callProductById }) {
                         <div className="w-full  px-3 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0 mt-8">
                             <div className="flex justify-center">
                                 <button
-                                    className="bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
+                                    className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-primary w-64 hover:bg-hover-primary sm:mt-0 lg:mt-4 xl:mt-4 text-white font-bold py-2 px-10 rounded-lg focus:outline-none focus:shadow-outline flex justify-center"
                                     type="submit">
                                     Agregar
                                 </button>

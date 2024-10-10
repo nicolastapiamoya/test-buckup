@@ -15,9 +15,10 @@ export default function DeleteButton() {
                     <Loader></Loader>
                     :
                     (
-                        <button className="border-solid border-2 border-red-400 hover:bg-naranja p-1 rounded-xl w-12 flex justify-center" type="submit">
-                            <FaIcons.FaTrash ></FaIcons.FaTrash>
-                        </button>)
+                        <button className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-naranja hover:bg-orange-300 p-1 rounded-xl w-12 flex justify-center" type="submit">
+                            <FaIcons.FaTrash className='text-white'></FaIcons.FaTrash>
+                        </button>
+                    )
             }
         </>
     )

@@ -4,6 +4,7 @@ import { configHost } from "../../config";
 
 export async function addSubsidiary(body) {
     try {
+
         const res = await fetch(`${configHost.host}/shop-sucursal`, {
             method: "POST",
             headers: {
@@ -13,6 +14,7 @@ export async function addSubsidiary(body) {
         })
 
         const data = await res.json();
+        console.log(data)
         if (data === null) {
             return { status: 'ok' }
         }

@@ -26,8 +26,8 @@ export default function SelectCategory({ categories, id_list }) {
     }
 
     return (
-        <div className="col-span-4 lg:col-span-2 xl:col-span-2  max-w-8xl rounded shadow-lg flex flex-wrap justify-center bg-blanco">
-            <div className="w-full px-3 mb-6 mt-0 sm:mt-0 md:mt-4 lg:mt-4 xl:mt-0 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0">
+        <div className="col-span-4 lg:col-span-2 xl:col-span-2  max-w-8xl rounded shadow-lg  bg-blanco">
+            <div className="w-full px-3 mb-5 mt-0 sm:mt-0 md:mt-4 lg:mt-4 xl:mt-0 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0">
                 <label className="mt-4 block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2" htmlFor="grid-state">
                     Selecciona los productos
                 </label>
@@ -50,10 +50,9 @@ export default function SelectCategory({ categories, id_list }) {
             </div>
 
             <div className="w-full px-3 mb-6 mt-0 sm:mt-0 md:mt-4 lg:mt-4 xl:mt-0 mx-4 sm:mx-3 md:mx-2 lg:mx-1 xl:mx-0">
-                <div className="grid grid-cols-3 gap-2">
                     {
                         loader ?
-                            <div className="col-span-3 flex justify-center">
+                            <div className=" flex justify-center">
                                 <Oval
                                     visible={true}
                                     height="65"
@@ -67,17 +66,17 @@ export default function SelectCategory({ categories, id_list }) {
                                 {
                                     products.length > 0 ? products.map((prd, index) => (
                                         <>
-                                            <div className="col-span-2">{prd.name}</div>
-                                            <div className="col-span-1">                           
-                                                <AddButtonServer id_product_list={id_list} id_product={prd.id_product}></AddButtonServer>
+                                            <div className="w-full flex items-center p-3 mb-3 bg-gray-50 rounded-md  hover:bg-gray-100 transition duration-300">
+                                                <span >{prd.name}</span>
+                                                <span className='ml-auto'>
+                                                    <AddButtonServer id_product_list={id_list} id_product={prd.id_product}></AddButtonServer>
+                                                </span>
                                             </div>
                                         </>
                                     )) : <></>
                                 }
                             </>
                     }
-
-                </div>
             </div>
         </div>
     )

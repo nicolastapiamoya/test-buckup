@@ -25,26 +25,29 @@ export default async function UsersTable({ users }) {
                 </thead>
                 <tbody>
 
-                        {users.length > 0 ? users.map((user, index) => (
-                            <tr key={`${user.id_order}-${index}`}>
-                                <td className="border px-4 py-1 text-sm text-center">{user.id_user}</td>
-                                <td className="border px-4 py-1 text-sm">{user.name_user}</td>
-                                <td className="border px-4 py-1 text-sm">{user.email_user}</td>
-                                <td className="border px-4 py-1 text-sm">{user.id_role}</td>
-                                <td className="border px-4 py-1 text-sm">{user.status}</td>
-                                <td className="border px-4 py-1">
-                                    <Link className="bg-celeste hover:bg-hover-celeste text-white font-bold py-1 px-4 rounded-full" href={`/administrator/users/${user.id_user}`}>
-                                        Ver
-                                    </Link>
-                                </td>
-                                <td className="border px-4 py-1">
-                                    <button className="bg-primary hover:bg-hover-primary text-white font-bold py-1 px-4 rounded-full">
-                                        <IconLu.LuX />
-                                    </button>
-                                </td>
-                            </tr>
-                        )) : <>Cargando Usuario...</>}
-                
+                    {users.length > 0 ? users.map((user, index) => (
+                        <tr key={`${user.id_order}-${index}`}>
+                            <td className="border px-4 py-1 text-sm text-center">{user.id_user}</td>
+                            <td className="border px-4 py-1 text-sm">{user.name_user}</td>
+                            <td className="border px-4 py-1 text-sm">{user.email_user}</td>
+                            <td className="border px-4 py-1 text-sm">{user.id_role}</td>
+                            <td className="border px-4 py-1 text-sm">{user.status}</td>
+                            <td className="border px-4 py-1">
+                                <Link href={`/administrator/users/${user.id_user}`}>
+                                    <div className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-celeste hover:bg-hover-celeste text-white font-bold py-1 px-4 rounded-full">
+                                        <IconLu.LuEye />
+                                    </div>
+                                </Link>
+
+                            </td>
+                            <td className="border px-4 py-1">
+                                <button className="shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 bg-naranja hover:bg-orange-300 text-white font-bold py-1 px-4 rounded-full">
+                                    <IconLu.LuTrash />
+                                </button>
+                            </td>
+                        </tr>
+                    )) : <>Cargando Usuario...</>}
+
                 </tbody>
             </table>
         </div>
